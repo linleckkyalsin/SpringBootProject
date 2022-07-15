@@ -1,10 +1,6 @@
 package com.example.demo.student;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -27,7 +23,7 @@ public class Student {
     private String name;
     @Transient
     private Integer age;
-
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate dob;
     private String email;
 
