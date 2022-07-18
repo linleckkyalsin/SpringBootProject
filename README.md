@@ -14,13 +14,3 @@ Oracale OpenJDK version 18.0.1
 - student controller API から リクエストの処理,student service から 機能 を使います。
 - student service には CRUD の 機能 をかきます。
 
-## curlコマンド
-
-GET: curl http://localhost:8080/api/v1/student
-
-POST: curl -d '{"name":"kitagawa","dob":"2001-03-05","email":"kitagawa@gmail.com"}' -H "Content-Type: application/json"
--X POST http://localhost:8080/api/v1/student
-
-PUT:curl -X PUT -d "name=hello&dob=1936-02-04" http://localhost:8080/api/v1/student/1
-
-DELETE:curl -X DELETE http://localhost:8080/api/v1/student/1  
